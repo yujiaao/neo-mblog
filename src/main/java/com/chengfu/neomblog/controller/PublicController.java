@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.neo4j.helpers.collection.ClosableIterable;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.neo4j.conversion.Result;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,7 +25,7 @@ public class PublicController {
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String publicInfo(Model model) {
-		ClosableIterable<User> users = userRepository.findAll();
+		Result<User> users = userRepository.findAll();
 		List<User> result = new ArrayList<User>();
 		for (User user : users) {
 			result.add(user);
