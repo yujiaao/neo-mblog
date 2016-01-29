@@ -21,7 +21,7 @@
 
 	<context:spring-configured />
 
-	<neo4j:config storeDirectory="data/neo-mblog.db"  base-package="com.chengfu.neomblog"/>
+	<neo4j:config storeDirectory="data/neo-mblog.db"  base-package="com.chengfu.neomblog.model"/>
 
 	<neo4j:repositories base-package="com.chengfu.neomblog.repository" />
 
